@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="aqua-core" Version="4.5.1" />
     <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
   </ItemGroup>
 
@@ -43,6 +42,10 @@
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
     <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\aqua-core\src\Aqua\Aqua.csproj" />
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
