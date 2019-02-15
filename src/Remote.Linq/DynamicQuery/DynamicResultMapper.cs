@@ -24,6 +24,7 @@ namespace Remote.Linq.DynamicQuery
         internal static T MapToType<T>(IEnumerable<DynamicObject> dataRecords, IDynamicObjectMapper mapper, Expression expression)
         {
             var elementType = TypeHelper.GetElementType(typeof(T));
+            var strElementType = elementType.Name;
 
             if (mapper is null)
             {

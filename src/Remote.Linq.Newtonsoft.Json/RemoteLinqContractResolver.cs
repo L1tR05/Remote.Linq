@@ -21,6 +21,7 @@ namespace Remote.Linq
 
         public override JsonContract ResolveContract(Type type)
         {
+            var strType = type.Name;
             if (IsTypeHandled(type))
             {
                 return base.ResolveContract(type);
